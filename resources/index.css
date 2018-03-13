@@ -12,6 +12,13 @@ p {
     padding-top:10px;
 }
 
+.note {
+    font-size:9px;
+    color:grey;
+    text-align:left;
+    line-height:5px;
+}
+
 .bubble {
     background-image: url("/bubble.png");
     background-repeat: no-repeat;

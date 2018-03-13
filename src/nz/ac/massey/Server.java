@@ -46,6 +46,10 @@ public class Server extends Thread {
                 String lines = data.split(System.lineSeparator(), 2)[0];
                 String file = lines.split(" ", 3)[1];
 
+                if(file.equals("/")) {
+                    file = "/index.html";
+                }
+
 
                 /*
                     Respond to the client with the requested resource.
@@ -87,7 +91,7 @@ public class Server extends Thread {
                     }
                     catch(IOException iee) {
                         bout.write("\r\n".getBytes());
-                        bout.write("Uh...there's no 404 page.".getBytes());
+                        bout.write("<p>Uh...there's no 404 page.</p>".getBytes());
                     }
                 }
 
